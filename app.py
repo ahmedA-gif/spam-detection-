@@ -27,6 +27,11 @@ try:
 except FileNotFoundError:
     st.error("Model or vectorizer file not found. Please run spam_classifier.py first to generate them.")
     st.stop()
+for resource in ['punkt_tab', 'punkt', 'stopwords']:
+    try:
+        nltk.data.find(f'tokenizers/{resource}') if resource != 'stopwords' else nltk.data.find(f'corpora/{resource}')
+    except LookupError:
+        nltk.download(resourc
 
 # Load dataset for similar messages
 try:
