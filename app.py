@@ -31,7 +31,7 @@ for resource in ['punkt_tab', 'punkt', 'stopwords']:
     try:
         nltk.data.find(f'tokenizers/{resource}') if resource != 'stopwords' else nltk.data.find(f'corpora/{resource}')
     except LookupError:
-        nltk.download(resourc
+        nltk.download(resource,force=True)
 
 # Load dataset for similar messages
 try:
