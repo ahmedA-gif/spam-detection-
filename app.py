@@ -7,6 +7,8 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 import pandas as pd
 import os
+nltk.download('punkt')
+nltk.download('stopwords')
 
 # Ensure NLTK resources are downloaded
 try:
